@@ -1,0 +1,628 @@
+2024-06-12 11:16:55 - Starting UploadServiceApplication using Java 21.0.2 with PID 11620 (C:\Users\Admin\Documents\youtube-backend\upload-service\target\classes started by Admin in C:\Users\Admin\Documents\youtube-backend\upload-service)
+2024-06-12 11:16:55 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-06-12 11:16:55 - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 11:16:58 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:16:58 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2024-06-12 11:16:58 - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2024-06-12 11:16:58 - Finished Spring Data repository scanning in 131 ms. Found 1 Elasticsearch repository interface.
+2024-06-12 11:16:58 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:16:58 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2024-06-12 11:16:58 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2024-06-12 11:16:58 - Finished Spring Data repository scanning in 12 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2024-06-12 11:16:58 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:16:58 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 11:16:58 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 11:16:58 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 11:16:58 - Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2024-06-12 11:16:58 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 11:16:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 11:16:58 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-06-12 11:16:58 - Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+2024-06-12 11:16:59 - Tomcat initialized with port 8080 (http)
+2024-06-12 11:16:59 - Starting service [Tomcat]
+2024-06-12 11:16:59 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-12 11:17:00 - Initializing Spring embedded WebApplicationContext
+2024-06-12 11:17:00 - Root WebApplicationContext: initialization completed in 4155 ms
+2024-06-12 11:17:02 - HikariPool-1 - Starting...
+2024-06-12 11:17:03 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5be51aa
+2024-06-12 11:17:03 - HikariPool-1 - Start completed.
+2024-06-12 11:17:04 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 11:17:05 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-12 11:17:05 - HHH000026: Second-level cache disabled
+2024-06-12 11:17:05 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 11:17:07 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 11:17:07 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:17:08 - request [HEAD http://localhost:9200/videos] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2024-06-12 11:17:08 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 11:17:09 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@184218af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e7423bb, org.springframework.security.web.context.SecurityContextHolderFilter@2728e305, org.springframework.security.web.header.HeaderWriterFilter@5eb054, org.springframework.web.filter.CorsFilter@270663e2, org.springframework.security.web.authentication.logout.LogoutFilter@423325e0, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@28993a77, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@17e03804, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@53425450, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3987bfc8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62291850, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2518245b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31084f37, org.springframework.security.web.access.ExceptionTranslationFilter@77f2807f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@397a70d8]
+2024-06-12 11:17:10 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class com.weshare.uploadservice.exceptions.UploadCompletionException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleUploadCompletionException(com.weshare.uploadservice.exceptions.UploadCompletionException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(org.springframework.web.multipart.MaxUploadSizeExceededException)}
+2024-06-12 11:17:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 11:17:10 - HikariPool-1 - Shutdown initiated...
+2024-06-12 11:17:11 - HikariPool-1 - Shutdown completed.
+2024-06-12 11:17:11 - Stopping service [Tomcat]
+2024-06-12 11:17:11 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-12 11:17:11 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class com.weshare.uploadservice.exceptions.UploadCompletionException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleUploadCompletionException(com.weshare.uploadservice.exceptions.UploadCompletionException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(org.springframework.web.multipart.MaxUploadSizeExceededException)}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.weshare.uploadservice.UploadServiceApplication.main(UploadServiceApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class com.weshare.uploadservice.exceptions.UploadCompletionException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleUploadCompletionException(com.weshare.uploadservice.exceptions.UploadCompletionException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(org.springframework.web.multipart.MaxUploadSizeExceededException)}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class com.weshare.uploadservice.exceptions.UploadCompletionException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleUploadCompletionException(com.weshare.uploadservice.exceptions.UploadCompletionException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(org.springframework.web.multipart.MaxUploadSizeExceededException)}
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.addExceptionMapping(ExceptionHandlerMethodResolver.java:114)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:289)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:256)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1063)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1005)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 20 common frames omitted
+2024-06-12 12:23:24 - Starting UploadServiceApplication using Java 21.0.2 with PID 19928 (C:\Users\Admin\Documents\youtube-backend\upload-service\target\classes started by Admin in C:\Users\Admin\Documents\youtube-backend\upload-service)
+2024-06-12 12:23:24 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-06-12 12:23:24 - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 12:23:26 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:23:26 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2024-06-12 12:23:26 - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2024-06-12 12:23:26 - Finished Spring Data repository scanning in 114 ms. Found 1 Elasticsearch repository interface.
+2024-06-12 12:23:26 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:23:26 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2024-06-12 12:23:26 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2024-06-12 12:23:26 - Finished Spring Data repository scanning in 14 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2024-06-12 12:23:26 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:23:26 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 12:23:26 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 12:23:26 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 12:23:26 - Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2024-06-12 12:23:26 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:23:26 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 12:23:26 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-06-12 12:23:26 - Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2024-06-12 12:23:28 - Tomcat initialized with port 8080 (http)
+2024-06-12 12:23:28 - Starting service [Tomcat]
+2024-06-12 12:23:28 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-12 12:23:28 - Initializing Spring embedded WebApplicationContext
+2024-06-12 12:23:28 - Root WebApplicationContext: initialization completed in 3805 ms
+2024-06-12 12:23:28 - HikariPool-1 - Starting...
+2024-06-12 12:23:29 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52d96367
+2024-06-12 12:23:29 - HikariPool-1 - Start completed.
+2024-06-12 12:23:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 12:23:33 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-12 12:23:33 - HHH000026: Second-level cache disabled
+2024-06-12 12:23:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 12:23:35 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 12:23:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 12:23:36 - request [HEAD http://localhost:9200/videos] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2024-06-12 12:23:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 12:23:37 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c6b36d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f1485c3, org.springframework.security.web.context.SecurityContextHolderFilter@77f2807f, org.springframework.security.web.header.HeaderWriterFilter@570cef1e, org.springframework.web.filter.CorsFilter@17e03804, org.springframework.security.web.authentication.logout.LogoutFilter@7bb2b910, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@79fc6651, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@61fe5253, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2518245b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@764bf20d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5eb054, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34d08905, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@363bf9d, org.springframework.security.web.access.ExceptionTranslationFilter@7c5c53e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a389b39]
+2024-06-12 12:23:37 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class java.io.IOException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleIOException(java.io.IOException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(java.io.IOException)}
+2024-06-12 12:23:37 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 12:23:37 - HikariPool-1 - Shutdown initiated...
+2024-06-12 12:23:37 - HikariPool-1 - Shutdown completed.
+2024-06-12 12:23:37 - Stopping service [Tomcat]
+2024-06-12 12:23:37 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-12 12:23:37 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class java.io.IOException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleIOException(java.io.IOException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(java.io.IOException)}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.weshare.uploadservice.UploadServiceApplication.main(UploadServiceApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class java.io.IOException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleIOException(java.io.IOException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(java.io.IOException)}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class java.io.IOException]: {public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.handleIOException(java.io.IOException), public org.springframework.http.ResponseEntity com.weshare.uploadservice.exceptions.GlobalExceptionHandler.MaxUploadSizeException(java.io.IOException)}
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.addExceptionMapping(ExceptionHandlerMethodResolver.java:114)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:289)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:256)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1063)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1005)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 20 common frames omitted
+2024-06-12 12:25:47 - Starting UploadServiceApplication using Java 21.0.2 with PID 22664 (C:\Users\Admin\Documents\youtube-backend\upload-service\target\classes started by Admin in C:\Users\Admin\Documents\youtube-backend\upload-service)
+2024-06-12 12:25:47 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-06-12 12:25:47 - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 12:25:49 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:25:49 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2024-06-12 12:25:49 - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2024-06-12 12:25:49 - Finished Spring Data repository scanning in 125 ms. Found 1 Elasticsearch repository interface.
+2024-06-12 12:25:49 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:25:49 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2024-06-12 12:25:49 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2024-06-12 12:25:49 - Finished Spring Data repository scanning in 14 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2024-06-12 12:25:50 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:25:50 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 12:25:50 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 12:25:50 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 12:25:50 - Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2024-06-12 12:25:50 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 12:25:50 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 12:25:50 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-06-12 12:25:50 - Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-06-12 12:25:51 - Tomcat initialized with port 8080 (http)
+2024-06-12 12:25:51 - Starting service [Tomcat]
+2024-06-12 12:25:51 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-12 12:25:51 - Initializing Spring embedded WebApplicationContext
+2024-06-12 12:25:51 - Root WebApplicationContext: initialization completed in 4432 ms
+2024-06-12 12:25:52 - HikariPool-1 - Starting...
+2024-06-12 12:25:53 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74b1838
+2024-06-12 12:25:53 - HikariPool-1 - Start completed.
+2024-06-12 12:25:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 12:25:55 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-12 12:25:55 - HHH000026: Second-level cache disabled
+2024-06-12 12:25:55 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 12:25:57 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 12:25:57 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 12:25:57 - request [HEAD http://localhost:9200/videos] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2024-06-12 12:25:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 12:25:59 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@61fe5253, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b2a6ed3, org.springframework.security.web.context.SecurityContextHolderFilter@570cef1e, org.springframework.security.web.header.HeaderWriterFilter@7da4c956, org.springframework.web.filter.CorsFilter@28993a77, org.springframework.security.web.authentication.logout.LogoutFilter@f2e28c7, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@40123014, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@79fc6651, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2728e305, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c6b36d7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1264dbc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77f2807f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f1485c3, org.springframework.security.web.access.ExceptionTranslationFilter@3c511385, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@124b1369]
+2024-06-12 12:26:00 - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-38e8cb03-gmathangi29-5a7e.k.aivencloud.com:20897]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\combined.pem
+	ssl.keystore.password = null
+	ssl.keystore.type = PEM
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\ca.pem
+	ssl.truststore.password = null
+	ssl.truststore.type = PEM
+
+2024-06-12 12:26:00 - These configurations '[ssl.key.location]' were supplied but are not used yet.
+2024-06-12 12:26:00 - Kafka version: 3.6.2
+2024-06-12 12:26:00 - Kafka commitId: c4deed513057c94e
+2024-06-12 12:26:00 - Kafka startTimeMs: 1718175360844
+2024-06-12 12:26:02 - App info kafka.admin.client for adminclient-1 unregistered
+2024-06-12 12:26:02 - Metrics scheduler closed
+2024-06-12 12:26:02 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-06-12 12:26:02 - Metrics reporters closed
+2024-06-12 12:26:02 - Tomcat started on port 8080 (http) with context path ''
+2024-06-12 12:26:02 - Started UploadServiceApplication in 16.277 seconds (process running for 17.366)
+2024-06-12 13:30:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 13:30:58 - HikariPool-1 - Shutdown initiated...
+2024-06-12 13:30:58 - HikariPool-1 - Shutdown completed.
+2024-06-12 13:31:09 - Starting UploadServiceApplication using Java 21.0.2 with PID 16880 (C:\Users\Admin\Documents\youtube-backend\upload-service\target\classes started by Admin in C:\Users\Admin\Documents\youtube-backend\upload-service)
+2024-06-12 13:31:09 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-06-12 13:31:09 - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 13:31:12 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:31:12 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2024-06-12 13:31:13 - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2024-06-12 13:31:13 - Finished Spring Data repository scanning in 277 ms. Found 1 Elasticsearch repository interface.
+2024-06-12 13:31:13 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:31:13 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2024-06-12 13:31:13 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2024-06-12 13:31:13 - Finished Spring Data repository scanning in 15 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2024-06-12 13:31:13 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:31:13 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 13:31:13 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 13:31:13 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 13:31:13 - Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2024-06-12 13:31:13 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:31:13 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 13:31:13 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-06-12 13:31:13 - Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2024-06-12 13:31:14 - Tomcat initialized with port 8080 (http)
+2024-06-12 13:31:14 - Starting service [Tomcat]
+2024-06-12 13:31:14 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-12 13:31:15 - Initializing Spring embedded WebApplicationContext
+2024-06-12 13:31:15 - Root WebApplicationContext: initialization completed in 5356 ms
+2024-06-12 13:31:15 - HikariPool-1 - Starting...
+2024-06-12 13:31:16 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74b1838
+2024-06-12 13:31:16 - HikariPool-1 - Start completed.
+2024-06-12 13:31:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 13:31:18 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-12 13:31:18 - HHH000026: Second-level cache disabled
+2024-06-12 13:31:18 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 13:31:20 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 13:31:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 13:31:21 - request [HEAD http://localhost:9200/videos] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2024-06-12 13:31:21 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 13:31:22 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f1485c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17e03804, org.springframework.security.web.context.SecurityContextHolderFilter@47b6f580, org.springframework.security.web.header.HeaderWriterFilter@c3972d0, org.springframework.web.filter.CorsFilter@764bf20d, org.springframework.security.web.authentication.logout.LogoutFilter@5a4ceb1, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@28bf7bea, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@7b2a6ed3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@45c8db36, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@363bf9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34d08905, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57421698, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@184218af, org.springframework.security.web.access.ExceptionTranslationFilter@4825aad0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50a2034c]
+2024-06-12 13:31:23 - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-38e8cb03-gmathangi29-5a7e.k.aivencloud.com:20897]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\combined.pem
+	ssl.keystore.password = null
+	ssl.keystore.type = PEM
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\ca.pem
+	ssl.truststore.password = null
+	ssl.truststore.type = PEM
+
+2024-06-12 13:31:23 - These configurations '[ssl.key.location]' were supplied but are not used yet.
+2024-06-12 13:31:23 - Kafka version: 3.6.2
+2024-06-12 13:31:23 - Kafka commitId: c4deed513057c94e
+2024-06-12 13:31:23 - Kafka startTimeMs: 1718179283975
+2024-06-12 13:31:25 - App info kafka.admin.client for adminclient-1 unregistered
+2024-06-12 13:31:25 - Metrics scheduler closed
+2024-06-12 13:31:25 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-06-12 13:31:25 - Metrics reporters closed
+2024-06-12 13:31:25 - Tomcat started on port 8080 (http) with context path ''
+2024-06-12 13:31:25 - Started UploadServiceApplication in 16.861 seconds (process running for 18.011)
+2024-06-12 13:31:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 13:31:45 - Initializing Servlet 'dispatcherServlet'
+2024-06-12 13:31:45 - Completed initialization in 16 ms
+2024-06-12 13:32:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 13:32:51 - HikariPool-1 - Shutdown initiated...
+2024-06-12 13:32:51 - HikariPool-1 - Shutdown completed.
+2024-06-12 13:33:37 - Starting UploadServiceApplication using Java 21.0.2 with PID 27296 (C:\Users\Admin\Documents\youtube-backend\upload-service\target\classes started by Admin in C:\Users\Admin\Documents\youtube-backend\upload-service)
+2024-06-12 13:33:37 - Running with Spring Boot v3.2.5, Spring v6.1.6
+2024-06-12 13:33:37 - No active profile set, falling back to 1 default profile: "default"
+2024-06-12 13:33:39 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:33:39 - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2024-06-12 13:33:39 - Spring Data Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ElasticsearchRepository, org.springframework.data.elasticsearch.repository.ElasticsearchRepository
+2024-06-12 13:33:39 - Finished Spring Data repository scanning in 109 ms. Found 1 Elasticsearch repository interface.
+2024-06-12 13:33:39 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:33:39 - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2024-06-12 13:33:39 - Spring Data Reactive Elasticsearch - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a Reactive Elasticsearch repository, consider annotating your entities with one of these annotations: org.springframework.data.elasticsearch.annotations.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository
+2024-06-12 13:33:39 - Finished Spring Data repository scanning in 13 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2024-06-12 13:33:39 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:33:39 - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-12 13:33:39 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 13:33:39 - Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-06-12 13:33:39 - Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2024-06-12 13:33:39 - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-12 13:33:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-12 13:33:39 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.weshare.uploadservice.repositories.VideoSearchRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-06-12 13:33:39 - Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
+2024-06-12 13:33:41 - Tomcat initialized with port 8080 (http)
+2024-06-12 13:33:41 - Starting service [Tomcat]
+2024-06-12 13:33:41 - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-06-12 13:33:41 - Initializing Spring embedded WebApplicationContext
+2024-06-12 13:33:41 - Root WebApplicationContext: initialization completed in 3921 ms
+2024-06-12 13:33:41 - HikariPool-1 - Starting...
+2024-06-12 13:33:42 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77ccded4
+2024-06-12 13:33:42 - HikariPool-1 - Start completed.
+2024-06-12 13:33:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-12 13:33:44 - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-12 13:33:44 - HHH000026: Second-level cache disabled
+2024-06-12 13:33:44 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-12 13:33:46 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-12 13:33:46 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-12 13:33:46 - request [HEAD http://localhost:9200/videos] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2024-06-12 13:33:47 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-12 13:33:48 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c1dc4e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7731fb94, org.springframework.security.web.context.SecurityContextHolderFilter@7861a433, org.springframework.security.web.header.HeaderWriterFilter@6222a343, org.springframework.web.filter.CorsFilter@48860fb8, org.springframework.security.web.authentication.logout.LogoutFilter@6272936b, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@15c042fc, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6559cbdd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@61c1be2f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3343997b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@494e7290, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e87c4cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14b3976, org.springframework.security.web.access.ExceptionTranslationFilter@7222e168, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d46f4a3]
+2024-06-12 13:33:49 - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-38e8cb03-gmathangi29-5a7e.k.aivencloud.com:20897]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\combined.pem
+	ssl.keystore.password = null
+	ssl.keystore.type = PEM
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\ca.pem
+	ssl.truststore.password = null
+	ssl.truststore.type = PEM
+
+2024-06-12 13:33:49 - These configurations '[ssl.key.location]' were supplied but are not used yet.
+2024-06-12 13:33:49 - Kafka version: 3.6.2
+2024-06-12 13:33:49 - Kafka commitId: c4deed513057c94e
+2024-06-12 13:33:49 - Kafka startTimeMs: 1718179429741
+2024-06-12 13:33:51 - App info kafka.admin.client for adminclient-1 unregistered
+2024-06-12 13:33:51 - Metrics scheduler closed
+2024-06-12 13:33:51 - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-06-12 13:33:51 - Metrics reporters closed
+2024-06-12 13:33:51 - Tomcat started on port 8080 (http) with context path ''
+2024-06-12 13:33:51 - Started UploadServiceApplication in 15.386 seconds (process running for 16.537)
+2024-06-12 13:34:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-12 13:34:04 - Initializing Servlet 'dispatcherServlet'
+2024-06-12 13:34:04 - Completed initialization in 0 ms
+2024-06-12 13:35:01 - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka-38e8cb03-gmathangi29-5a7e.k.aivencloud.com:20897]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\combined.pem
+	ssl.keystore.password = null
+	ssl.keystore.type = PEM
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\Admin\Documents\youtube-backend\upload-service\src\main\resources\ca.pem
+	ssl.truststore.password = null
+	ssl.truststore.type = PEM
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-06-12 13:35:01 - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-06-12 13:35:01 - Kafka version: 3.6.2
+2024-06-12 13:35:01 - Kafka commitId: c4deed513057c94e
+2024-06-12 13:35:01 - Kafka startTimeMs: 1718179501706
+2024-06-12 13:35:01 - [Producer clientId=producer-1] Cluster ID: 6YMo2ssjSoOm67GcEOg3Pw
+2024-06-12 13:35:01 - [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+2024-06-12 13:35:03 - request [POST http://localhost:9200/videos/_doc?refresh=false] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
+2024-06-12 13:35:03 - request [POST http://localhost:9200/videos/_refresh] returned 1 warnings: [299 Elasticsearch-7.17.21-d38e4b028f4a9784bb74de339ac1b877e2dbea6f "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/security-minimal-setup.html to enable security."]
